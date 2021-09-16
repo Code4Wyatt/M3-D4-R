@@ -93,3 +93,12 @@ function search(query) {
     displayBooks(filteredBooks);
   }
 
+function deleteItem(asin) { // passing the asin as a parameter 
+  const index = shoppingCartList.findIndex((book) => book.asin === asin); // targetting the book within the shoppingCartList that matches that asin
+
+  if (index !== -1) { // if there is an index (if index is not empty (-1))
+    shoppingCartList.splice(index, 1); // splice the selected element (index) once 
+  }
+
+  refreshShoppingCartList();
+}

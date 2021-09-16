@@ -1,16 +1,18 @@
 body {
-  background-color: rgba(235, 234, 221, 0.52);
+  background-color: rgba(116, 108, 108, 0.938);
 
 }
 
 .card {
-  background-color: rgb(207, 205, 192);
+  background-color: rgb(152, 160, 151)92);
 }
 
 h1 {
   position: relative;
   left: 45%;
   max-width: 200px;
+  color:rgb(255, 255, 255);
+  margin-top: 20px;
 }
 
 
@@ -59,4 +61,14 @@ h1 {
 
 .card-body {
   max-height: 300px !important;
+}
+
+.search {
+  position: relative;
+  left: 20px !important;
+  width: 500px !important;
+}
+
+.book-section {
+  margin-bottom: 140px;
 }
