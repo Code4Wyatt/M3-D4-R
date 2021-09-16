@@ -17,7 +17,7 @@ h1 {
 #cart {
   position: fixed;
   top: 50%;
-  left: 0px;
+  right: 0px;
   transform: translateY(-50%);
   min-width: 50px;
   min-height: 50px;

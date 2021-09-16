@@ -38,7 +38,7 @@ function displayBooks(_books = books) {
                 book.asin
               )}', this)">$${book.price}</button>
               <button class="btn btn-warning" onclick="this.closest('.col-12').remove()">
-                Skip me
+                Skip
               </button>
             </div>
           </div>
@@ -59,7 +59,7 @@ function addToCart(asin, element) {   // assigning the asin as the value for add
 }
 
 function refreshShoppingCartList() {
-    shoppingCartList.innerHTML = "";
+    shoppingCart.innerHTML = "";
 
     shoppingCartList.forEach(book => {
         shoppingCart.innerHTML += `
@@ -72,7 +72,7 @@ function refreshShoppingCartList() {
                 </div>
                 <button class="btn btn-danger" onclick="deleteItem('${String(
                     book.asin
-                  )}')">Delete </button>
+                  )}')">Delete</button>
         </div>
         `;
     });
@@ -93,12 +93,3 @@ function search(query) {
     displayBooks(filteredBooks);
   }
 
-  function deleteItem(asin) {
-    const index = shoppingCartList.findIndex((book) => book.asin === asin);
-
-    if (index !== -1) {
-      shoppingCartList.splice(index, 1);
-    }
-
-    refreshShoppingCartList();
-  }
