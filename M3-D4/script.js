@@ -1,15 +1,15 @@
-const getBookSectionRow = document.querySelector(".book-section-row");
-const shoppingCart = document.querySelector("#cart");
+const getBookSectionRow = document.querySelector(".book-section-row")
+const shoppingCart = document.querySelector("#cart")
 
 window.onload = () => {
     loadBooks()
 };
 
-let books = [];
+let books = []
 
-let shoppingCartList = [];
+let shoppingCartList = []
 
-let filteredBooks = [];
+let filteredBooks = []
 
 function loadBooks() {
     fetch("https://striveschool-api.herokuapp.com/books")
@@ -50,7 +50,7 @@ function displayBooks(_books = books) {
 function addToCart(asin, element) {   // assigning the asin as the value for addToCart
     console.log(asin)
      const book = books.find( (book) => book.asin == asin)   // finding only the asin that matches the one passed
-     shoppingCartList.push(book)
+     shoppingCartList.push(book) // pushing the book to shoppingCartList
      refreshShoppingCartList()
 
      console.log(shoppingCartList);
@@ -81,7 +81,7 @@ function refreshShoppingCartList() {
 function search(query) {
     if (query.length < 3) {    // at query length 3 (when 3 digits entered) 
       filteredBooks = books;   // use filteredBooks below to conver to lower case
-      displayBooks();           // display books
+      displayBooks();          // display books
       return;
     }
 
